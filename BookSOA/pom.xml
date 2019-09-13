@@ -103,6 +103,17 @@
                  <!-- extensions=true is needed to use the custom sar packaging type -->
                 <extensions>true</extensions>
             </plugin>
+            
+            <!-- plugin 2-maven compiler plugin -->
+	        <plugin>
+	            <groupId>org.apache.maven.plugins</groupId>
+	            <artifactId>maven-compiler-plugin</artifactId>
+	            <version>3.2</version>
+	            <configuration>
+	                <source>1.8</source>
+	                <target>1.8</target>
+	            </configuration>
+	        </plugin>
         </plugins>
     </build>
 
