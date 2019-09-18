@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="acb7c527-549d-46b5-bf7b-57caaf6798ba" activeEnvironment="Default" name="bpel" soapui-version="5.5.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.actions.iface.tools.soapui.TestRunnerAction@values-local"><![CDATA[<xml-fragment xmlns:con="http://eviware.com/soapui/config">
+  <con:entry key="Report Format(s)" value=""/>
+  <con:entry key="Host:Port" value=""/>
+  <con:entry key="Export JUnit Results" value="true"/>
+  <con:entry key="Export All" value="false"/>
+  <con:entry key="Save After" value="false"/>
+  <con:entry key="Add Settings" value="false"/>
+  <con:entry key="WSS Password Type" value=""/>
+  <con:entry key="TestSuite" value="BookBPELProcessBinding TestSuite"/>
+  <con:entry key="Endpoint" value=""/>
+  <con:entry key="Select Report Type" value=""/>
+  <con:entry key="System Properties" value=""/>
+  <con:entry key="Password" value=""/>
+  <con:entry key="Print Report" value="true"/>
+  <con:entry key="Open Report" value="false"/>
+  <con:entry key="Export JUnit Results with test properties" value="false"/>
+  <con:entry key="Global Properties" value=""/>
+  <con:entry key="Project Properties" value=""/>
+  <con:entry key="Project Password" value=""/>
+  <con:entry key="TestCase" value="BookBPELProcessBinding TestSuite"/>
+  <con:entry key="Username" value=""/>
+  <con:entry key="user-settings.xml Password" value=""/>
+  <con:entry key="TestRunner Path" value="/home/abraham/Applications/SoapUI-5.5.0/bin"/>
+  <con:entry key="Environment" value="Default"/>
+  <con:entry key="Coverage Report" value="false"/>
+  <con:entry key="Enable UI" value="false"/>
+  <con:entry key="Root Folder" value=""/>
+  <con:entry key="Ignore Errors" value="false"/>
+  <con:entry key="Domain" value=""/>
+  <con:entry key="Tool Args" value=""/>
+  <con:entry key="Save Project" value="true"/>
+</xml-fragment>]]></con:setting></con:settings><con:interface xsi:type="con:WsdlInterface" id="d5222776-71ff-4b90-9174-2b47ee3b9a85" wsaVersion="NONE" name="BookBPELProcessBinding" type="wsdl" bindingName="{http://xmlns.oracle.com/SOABPelDemo/BookSOA/BookBPELProcess}BookBPELProcessBinding" soapVersion="1_1" anonymous="optional" definition="http://localhost:7101/soa-infra/services/default/BookSOA/soapBookBpelProcess?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://localhost:7101/soa-infra/services/default/BookSOA/soapBookBpelProcess?WSDL"><con:part><con:url>http://localhost:7101/soa-infra/services/default/BookSOA/soapBookBpelProcess?WSDL</con:url><con:content><![CDATA[<wsdl:definitions name="BookBPELProcess" targetNamespace="http://xmlns.oracle.com/SOABPelDemo/BookSOA/BookBPELProcess" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:client="http://xmlns.oracle.com/SOABPelDemo/BookSOA/BookBPELProcess" xmlns:plnk="http://docs.oasis-open.org/wsbpel/2.0/plnktype" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/">
+  <wsdl:documentation>
+    <abstractWSDL>http://localhost:7101/soa-infra/services/default/BookSOA!1.0/WSDLs/BookBPELProcess.wsdl</abstractWSDL>
+  </wsdl:documentation>
+  <plnk:partnerLinkType name="BookBPELProcess">
+    <plnk:role name="BookBPELProcessProvider" portType="client:BookBPELProcess"/>
+  </plnk:partnerLinkType>
+  <wsdl:types>
+    <schema xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://xmlns.oracle.com/SOABPelDemo/BookSOA/BookBPELProcess" schemaLocation="http://localhost:7101/soa-infra/services/default/BookSOA/soapBookBpelProcess?XSD=../Schemas/BookBPELProcess.xsd"/>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="BookBPELProcessRequestMessage">
+    <wsdl:part name="payload" element="client:process"/>
+  </wsdl:message>
+  <wsdl:message name="BookBPELProcessResponseMessage">
+    <wsdl:part name="payload" element="client:processResponse"/>
+  </wsdl:message>
+  <wsdl:portType name="BookBPELProcess">
+    <wsdl:operation name="process">
+      <wsdl:input message="client:BookBPELProcessRequestMessage"/>
+      <wsdl:output message="client:BookBPELProcessResponseMessage"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BookBPELProcessBinding" type="client:BookBPELProcess">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="process">
+      <soap:operation style="document" soapAction="process"/>
+      <wsdl:input>
+        <soap:body use="literal"/>
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="bookbpelprocess_client_ep">
+    <wsdl:port name="BookBPELProcess_pt" binding="client:BookBPELProcessBinding">
+      <soap:address location="http://localhost:7101/soa-infra/services/default/BookSOA/soapBookBpelProcess"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part><con:part><con:url>http://localhost:7101/soa-infra/services/default/BookSOA/soapBookBpelProcess?XSD=../Schemas/BookBPELProcess.xsd</con:url><con:content><![CDATA[<schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://xmlns.oracle.com/SOABPelDemo/BookSOA/BookBPELProcess" xmlns="http://www.w3.org/2001/XMLSchema">
+  <element name="process">
+    <complexType>
+      <sequence>
+        <element name="input" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+  <element name="processResponse">
+    <complexType>
+      <sequence>
+        <element name="result" type="string"/>
+      </sequence>
+    </complexType>
+  </element>
+</schema>]]></con:content><con:type>http://www.w3.org/2001/XMLSchema</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://localhost:7101/soa-infra/services/default/BookSOA/soapBookBpelProcess</con:endpoint></con:endpoints><con:operation id="3be98f84-ebe4-42c2-8891-53892b707911" isOneWay="false" action="process" name="process" bindingOperationName="process" type="Request-Response" inputName="" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call id="65d8056b-a62f-403b-bfda-e5345db73f8e" name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/soa-infra/services/default/BookSOA/soapBookBpelProcess</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:book="http://xmlns.oracle.com/SOABPelDemo/BookSOA/BookBPELProcess">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <book:process>
+         <book:input>ISBN-1235</book:input>
+      </book:process>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="process"/><con:wsrmConfig version="1.2"/></con:call></con:operation></con:interface><con:testSuite id="f34bcbcb-338c-4915-9ba2-deae8743cc6c" name="BookBPELProcessBinding TestSuite"><con:settings/><con:runType>SEQUENTIAL</con:runType><con:testCase id="0e22f3f2-0a3d-4902-9044-8c3c62cf1e13" failOnError="true" failTestCaseOnErrors="true" keepSession="false" maxResults="0" name="BookBPELProcessBinding TestSuite" searchProperties="true"><con:settings/><con:testStep type="request" id="0070cdca-02c5-48f4-a455-9aaf92fbd31d" name="process"><con:settings/><con:config xsi:type="con:RequestStep" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:interface>BookBPELProcessBinding</con:interface><con:operation>process</con:operation><con:request name="process" outgoingWss="" incomingWss="" timeout="" sslKeystore="" useWsAddressing="false" useWsReliableMessaging="false" wssPasswordType="" id="8896f93c-5663-452f-8daf-2e2069fb2675"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@inline-response-attachments">false</con:setting><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting><con:setting id="discardResponse">false</con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://localhost:7101/soa-infra/services/default/BookSOA/soapBookBpelProcess</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:book="http://xmlns.oracle.com/SOABPelDemo/BookSOA/BookBPELProcess">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <book:process>
+         <book:input>ISBN-1235</book:input>
+      </book:process>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:assertion type="Valid HTTP Status Codes" id="dba3d1f0-3827-4682-bdb2-184faa8f5bc2" name="Valid HTTP Status Codes"><con:configuration><codes>200</codes></con:configuration></con:assertion><con:assertion type="Schema Compliance" id="c44d8b6b-7082-408e-b96e-d4364ff7f1e9" name="Schema Compliance"><con:configuration/></con:assertion><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="process"/><con:wsrmConfig version="1.2"/></con:request></con:config></con:testStep><con:properties/></con:testCase><con:properties/></con:testSuite><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
